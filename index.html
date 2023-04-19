@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>preloader animation</title>
+</head>
+<body id="bod">
+    <div class="preloader-main">
+        <div class="preloader" id="preload">
+
+        </div>
+    </div>
+    <div style="color: white; display: flex; text-align: center; justify-content: center;align-items: center; position: relative;margin-top: -520px;" id="landingpage-container">
+        <ul>
+            <li>HOME</li>
+            <li>ABOUT</li>
+            <li>SERVICES</li>
+        </ul>
+        <script>
+            document.querySelector("#landingpage-container").style.display = "none";
+            document.getElementById("preload").classList.add('preloader');
+            
+            setTimeout(() => {
+                document.getElementById("preload").classList.remove('preloader');
+                document.querySelector("#landingpage-container").style.display = "block";
+                document.getElementById("bod").style.background = "black";
+            }, 4000);
+        </script>
+    </div>
+</body>
+</html>
